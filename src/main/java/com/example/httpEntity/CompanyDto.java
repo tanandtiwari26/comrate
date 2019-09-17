@@ -2,7 +2,7 @@ package com.example.httpEntity;
 
 public class CompanyDto {
 
-	public String companyNo;
+	private String companyNo;
 
 	public String getCompanyNo() {
 		return companyNo;

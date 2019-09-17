@@ -17,7 +17,7 @@ public class GraphController {
 	@Autowired
 	private CompanyService graphService;
 
-	@PostMapping()
+	@PostMapping(value = "/addcompany")
 	public @ResponseBody MessageResponse addCompany(@RequestBody CompanyDto company, BindingResult bindingResult) {
 		MessageResponse messageResponse = new MessageResponse();
 		graphService.addCompany(company);

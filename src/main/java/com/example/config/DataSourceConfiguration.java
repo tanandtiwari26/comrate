@@ -1,8 +1,5 @@
 package com.example.config;
 
-import org.neo4j.driver.v1.AuthTokens;
-import org.neo4j.driver.v1.Driver;
-import org.neo4j.driver.v1.GraphDatabase;
 import org.neo4j.ogm.config.Configuration.Builder;
 import org.neo4j.ogm.session.SessionFactory;
 import org.springframework.context.annotation.Bean;
@@ -23,8 +20,6 @@ public class DataSourceConfiguration {
 
 	@Bean
 	public org.neo4j.ogm.config.Configuration getConfiguration() {
-		// Driver asd = GraphDatabase.driver(uri, AuthTokens.basic(user,
-		// password));
 		org.neo4j.ogm.config.Configuration config = new Builder().uri(URL).credentials("", "").connectionPoolSize(10)
 				.build();
 		return config;
